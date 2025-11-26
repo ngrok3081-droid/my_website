@@ -1,0 +1,237 @@
+*{
+    padding: 0;
+    margin: 0;
+    color: white;
+    font-family: sans-serif;
+}
+
+body{
+    background-color:#001;
+    display:flex;
+}
+
+.menu{
+    background-color:#123;
+    width:60px;
+    /* full height */
+    height: 100vh; 
+    padding: 20px;
+    overflow:hidden;
+    transition: .5s;
+}
+
+.menu:hover{
+    width:260px;
+}/* اظهار النصوص عند التمرير على القائمة */
+
+
+.image-box{
+    width: 50px;
+    height:50px;
+    border-radius: 50%;
+    /* اي شي يخرج عن ال di يسوي له اخفاء */
+    overflow: hidden;
+    border: 3px solid white;
+    /* التحكم في الانكماش العناصر في ال div */
+    flex-shrink: 0;
+}
+
+
+
+.image-box img{
+    width: 100%;
+}
+
+.profile{
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.profile h2{
+    font-size: 20px;
+    text-transform: capitalize;
+
+}
+
+ul{
+    list-style:none;
+    position:relative;
+    height: 95%;
+}
+
+ul li a{
+    display:block;
+    text-decoration: none;
+    /* background-color:red; */
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 8px;
+    /* جعل العناصر جنب بعض */
+    display:flex;
+    align-items:center;
+    /* تباعد بين العناصر */
+    gap : 40px;
+    transition:.5s;
+
+}
+ul li a:hover, .data-info .box:hover, td:hover{
+    background-color:#ffffff55;
+}
+ul li a:hover, .active{
+    background-color:#ffffff55;
+}
+
+.log-out{
+    position:absolute;
+    bottom:0;
+    width: 100%;
+}
+
+.log-out a{
+    background-color:red;
+}
+ul li a i{
+    color:rgb(89, 175, 93);
+    font-size: 30px
+}
+
+.content{
+    width:100%;
+    margin:10px;
+}
+
+.title-info{
+    background-color: rgb(4,129,255);
+    padding:10px;
+    display:flex;
+    justify-content: space-between;
+}
+
+.data-info{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap:10px;
+}
+
+.data-info .box{
+    height: 150px;
+    background-color: #123;
+    /* نفس خاصية width لكن بشكل افضل */
+    flex-basis: 150px;
+    /* خاصية التجاوب للمساحة */
+    flex-grow:1;
+    border-radius: 8px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    
+}
+
+.data-info .box i{
+    font-size: 40px;
+}
+
+.data-info .box .data{
+    text-align: center;
+}
+.data-info .box .data span{
+    font-size:30px;
+}
+
+table{
+    width:100%;
+    text-align:center;
+    border-spacing: 8px ;
+}
+td,th{
+    background-color: #123;
+    height:40px;
+    border-radius:8px;
+}
+th{
+    background-color: rgb(21, 150, 107);
+}
+
+.price , .counts{
+    padding: 6px;
+    border-radius:6px
+}
+.price{
+    background-color: green;
+}
+.counts{
+    background-color: rgb(219, 235, 8);
+    color:black;
+}
+.count{
+    width:10px;
+}
+.new{
+    margin: 20px 0;
+    display:flex;
+    gap:10px;
+}
+#newName, #newPrice{
+    flex:1;
+    padding: 10px;
+    border-radius:6px;
+    border:none;
+    outline:none;
+    background-color:   rgb(4,129,255);
+    
+}
+#addproduct{
+    padding: 10px 20px;
+    border-radius:6px;
+    border:none;
+    outline:none;
+    background-color: rgb(21, 150, 107);
+    color:white;
+    cursor:pointer;
+}
+#addproduct:hover{
+    background-color: #999;
+} 
+.settings-panel {
+    position: fixed;   /* بدلاً من absolute — حتى تكون فوق كل شيء */
+    left: 250px;
+    top: 150px;
+    background: #fff;
+    width: 220px;
+    border-radius: 10px;
+    padding: 10px;
+    display: none;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+    z-index: 99999;  /* رقم كبير حتى تظهر في الأمام */
+}
+
+
+.settings-panel ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.settings-panel ul li {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ddd;
+    display:flex;
+    color:black;
+}
+
+.settings-panel ul li:hover {
+    background: #f0f0f0;
+}
+
+.setting , .setting i{
+    position: relative;
+    z-index: 1000;
+    x: 1000;
+
+}
+
+
